@@ -28,3 +28,31 @@ document.addEventListener("keypress", function(event){
     }
  });
 
+
+
+
+document.querySelector(".percent").addEventListener("click", function(){
+    let getValue = document.querySelector(".input_number").value / 100;
+
+    document.querySelector(".input_number").value = getValue;
+
+    return getValue;
+});
+
+
+function del(){
+    let inputValue = document.querySelector(".input_number").value;
+
+    let arr = [];
+    arr.push(inputValue);
+
+    
+    arr.splice(arr.length - 1 , 1);
+    
+    console.log(arr);
+    
+    document.querySelector(".input_number").value = arr;
+
+    return arr;
+
+};
